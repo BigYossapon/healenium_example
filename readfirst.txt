@@ -1,0 +1,13 @@
+1.run docker
+2.open folder by vscode
+3.$docker-compose up -d  if have some run container docker stop "name_container"
+4.$cd web_example
+5.$python app.py or $flask run --host=0.0.0.0 --port=5000
+6.$cd..
+7.$python healenium.py
+8.เล่น 1 ครั้ง ทดลองเปลี่ยน element เว็บดู ที่ index.html 
+9.$python healenium.py
+
+
+
+. docker stop hlm-proxy

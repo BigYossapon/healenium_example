@@ -1,0 +1,17 @@
+# ใช้ base image ของ Python
+FROM python:3.12
+
+# ตั้งค่า working directory
+WORKDIR /app
+
+# คัดลอกไฟล์ทั้งหมดไปที่ /app
+COPY . .
+
+# ติดตั้ง dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# เปิดพอร์ต 5000
+EXPOSE 5000
+
+# คำสั่งรัน Flask
+CMD ["python", "app.py"]

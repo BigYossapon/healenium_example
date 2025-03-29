@@ -4,10 +4,13 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 # ใช้ Chrome WebDriver ปกติ
 chrome_options = Options()
-chrome_options.add_argument("--headless")  # รันแบบไม่มี UI
+# chrome_options.add_argument("--headless")  # รันแบบไม่มี UI
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 
@@ -21,11 +24,11 @@ driver.command_executor._proxy_url = "http://localhost:8085"
 
 
 # เข้าเว็บไซต์
-driver.get("http://192.168.1.107:5000/")
-
+# driver.get("http://host.docker.internal:5000/")
+driver.get("http://localhost:5000/")
 # ค้นหา Element (หากเจอปัญหา Healenium จะพยายามแก้ไขเอง)
 time.sleep(3)
-username_input = driver.find_element(By.ID, "username")
+username_input = driver.find_element(By.ID, "isis")
 password_input = driver.find_element(By.ID, "password")
 
 username_input.send_keys("testuser")

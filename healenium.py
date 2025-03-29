@@ -13,7 +13,7 @@ driver = webdriver.Remote('http://localhost:8085', options=options)
 
 
 # เข้าเว็บไซต์
-driver.get("http://192.168.1.107:5000/")
+driver.get("http://host.docker.internal:5000/")
 
 # ค้นหา Element (หากเจอปัญหา Healenium จะพยายามแก้ไขเอง)
 time.sleep(3)

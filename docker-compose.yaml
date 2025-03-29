@@ -1,6 +1,11 @@
 version: "3.8"
 
 services:
+  web:
+    container_name: falsk_web
+    build: ./web_example
+    ports:
+      - "5000:5000"
 
   postgres-db:
     image: postgres:15.5-alpine

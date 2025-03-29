@@ -1,0 +1,7 @@
+docker stop $(docker ps -aq)  ถ้า container รันอยู่
+docker rm $(docker ps -aq)  ถ้าไม่รันและต้องการลบทิ้ง 
+docker-compose up --build -d 
+docker-compose down 
+docker ps 
+docker ps -a
+docker build -t name_container -f ./path   ตอน solo file dockerfile
